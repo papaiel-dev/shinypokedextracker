@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shiny Pokédex Tracker v9.5.1</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="panel">
+
+<header class="pokedex-header">
+<div class="pokedex-lights">🔵 🟢 🟡 🔴</div>
+<h1 style="margin:0">✨ SHINY POKÉDEX TRACKER ✨</h1>
+</header>
+
+<div id='stats' class='panel'></div><div class="panel"><label>🌎 Região:</label>
+<select id="regionFilter" onchange="render()">
+<option value="national">National</option>
+<option value="kanto">Kanto</option>
+<option value="johto">Johto</option>
+<option value="hoenn">Hoenn</option>
+<option value="sinnoh">Sinnoh</option>
+<option value="unova">Unova</option>
+<option value="kalos">Kalos</option>
+<option value="alola">Alola</option>
+<option value="galar">Galar</option>
+<option value="paldea">Paldea</option>
+</select></div>
+
+<div class="goals">
+<div class="goal">
+<h3>📦 Próximo Pokémon</h3>
+<img id="haveImg">
+<div id="haveText"></div>
+<button class="btn" onclick="markHaveTarget()"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" width="18"></button><button class="btn" onclick="openSerebii(getNextHave()+1)">📍 Serebii</button>
+</div>
+
+<div class="goal">
+<h3>✨ Próximo Shiny</h3>
+<img id="shinyImg">
+<div id="shinyText"></div>
+<button class="btn" onclick="markCollectionShiny()"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" width="18"></button><button class="btn" onclick="openSerebii(getNextCollection()+1)">📍 Serebii</button>
+</div>
+</div>
+
+<h3>📋 Próximos 5 Shinies</h3>
+<div id="next5" class="next5"></div>
+
+<div class="controls" id="controlsMenu">
+<button class="settings-btn" onclick="toggleSettings()">⚙️</button>
+<div class="settings-content">
+<input id="search" placeholder="Buscar..." onkeyup="render()"><br><br>
+<button onclick="exportData()">💾 Exportar JSON</button><br><br>
+<input type="file" onchange="importData(event)">
+</div>
+</div>
+</div>
+
+<div id="boxes"></div>
+
+<script src="app.js"></script>
+</body></html>

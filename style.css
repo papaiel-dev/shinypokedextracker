@@ -1,0 +1,52 @@
+body{font-family:Segoe UI,Arial;padding:20px;
+background:
+linear-gradient(rgba(255,255,255,.90),rgba(255,255,255,.90)),
+url('https://archives.bulbagarden.net/media/upload/3/3e/Kanto_FRLG.png');
+background-size:cover;background-attachment:fixed;}
+.panel,.box{background:#fff;border-radius:16px;padding:16px;margin-bottom:16px;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.goals{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.goal{text-align:center;background:#f7f9ff;padding:12px;border-radius:12px}
+.goal img,.next5card img,.slot img{image-rendering:pixelated}
+.goal img{width:96px;height:96px}
+.btn{padding:6px 10px;margin:2px;border-radius:8px;border:1px solid #ccc;cursor:pointer}
+.next5{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;align-items:flex-start}
+.next5card{width:115px;background:#f7f9ff;border-radius:10px;padding:6px;text-align:center}
+.next5card img{width:48px;height:48px}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.slot{background:#f8f9ff;border:2px solid #d7def8;border-radius:12px;padding:6px;text-align:center}
+.slot.have{background:#e8fff0}
+.slot.shiny{border-color:gold;box-shadow:0 0 10px rgba(255,215,0,.6)}
+.slot img{width:64px;height:64px}
+.controls{position:fixed;top:15px;right:15px;z-index:1000}
+.settings-content{display:none;position:absolute;right:0;top:40px;background:#fff;padding:10px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.2);min-width:220px}
+.controls.open .settings-content{display:block}
+.settings-btn{font-size:22px;border:none;background:#fff;border-radius:50%;width:42px;height:42px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.btn img{width:14px!important;height:14px!important;display:block;margin:auto}
+
+header.pokedex-header{
+background:linear-gradient(180deg,#ef5350,#c62828);
+border-radius:18px;
+padding:24px;
+margin-bottom:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+position:relative;
+overflow:hidden;
+text-align:center;
+color:white;
+}
+header.pokedex-header::before{
+content:'◓';
+position:absolute;
+right:20px;
+top:-35px;
+font-size:220px;
+opacity:.08;
+line-height:1;
+}
+.pokedex-lights{
+position:absolute;
+left:18px;
+top:12px;
+font-size:22px;
+letter-spacing:4px;
+}
