@@ -70,6 +70,31 @@ a.href=URL.createObjectURL(blob);
 a.download='kanto-shiny-dex-backup.json';
 a.click();
 }
+
+function goToPokemon(){
+ const q=document.getElementById('jumpSearch')?.value?.trim().toLowerCase();
+ if(!q) return;
+
+ const idx=pokemon.findIndex((p,i)=>
+   p.toLowerCase().includes(q) || String(i+1)===q
+ );
+
+ if(idx<0){
+   alert('Pokémon não encontrado');
+   return;
+ }
+
+ document.querySelectorAll('.slot.highlight')
+   .forEach(el=>el.classList.remove('highlight'));
+
+ const el=document.getElementById('pokemon-'+idx);
+
+ if(el){
+   el.classList.add('highlight');
+   el.scrollIntoView({behavior:'smooth',block:'center'});
+ }
+}
+
 function importData(e){
 const r=new FileReader();
 r.onload=()=>{data=JSON.parse(r.result);save();};
@@ -119,7 +144,7 @@ for(let b=firstBox;b<=lastBox;b++){
  grid.className='grid';
  for(let i=b*30;i<Math.min((b+1)*30,pokemon.length);i++){
   if(s && !pokemon[i].toLowerCase().includes(s)) continue;
-  grid.innerHTML+=`<div class="slot ${data[i].have?'have':''} ${data[i].shiny?'shiny':''}">
+  grid.innerHTML+=`<div id="pokemon-${i}" class="slot ${data[i].have?'have':''} ${data[i].shiny?'shiny':''}">
   <img src="${sprite(i+1,data[i].shiny)}">
   <div>#${String(i+1).padStart(3,'0')}</div>
   <div>${pokemon[i]}</div>
