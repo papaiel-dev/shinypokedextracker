@@ -271,17 +271,24 @@ font-size:11px;
 }
 
 .next5{
-justify-content:center;
+display:grid;
+grid-template-columns:repeat(2,minmax(110px,1fr));
+gap:8px;
+justify-items:center;
 }
 
 .next5card{
-width:95px;
+width:110px;
 font-size:12px;
 }
 
 .next5card img{
 width:40px;
 height:40px;
+}
+
+.next5card div{
+word-break:break-word;
 }
 
 .region-name{
@@ -333,8 +340,12 @@ height:56px;
 font-size:10px;
 }
 
+.next5{
+grid-template-columns:repeat(2,1fr);
+}
+
 .next5card{
-width:90px;
+width:105px;
 }
 
 .region-row{
@@ -359,6 +370,22 @@ header.pokedex-header::before{
 font-size:120px;
 top:-20px;
 right:10px;
+}
+
+}
+
+/* ===================================== */
+/* EXTRA SMALL */
+/* ===================================== */
+
+@media (max-width:360px){
+
+.next5{
+grid-template-columns:1fr;
+}
+
+.next5card{
+width:120px;
 }
 
 }
