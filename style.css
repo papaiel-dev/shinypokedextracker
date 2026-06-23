@@ -1,27 +1,143 @@
-body{font-family:Segoe UI,Arial;padding:20px;
+body{
+font-family:Segoe UI,Arial;
+padding:20px;
 background:
 linear-gradient(rgba(255,255,255,.90),rgba(255,255,255,.90)),
 url('https://archives.bulbagarden.net/media/upload/3/3e/Kanto_FRLG.png');
-background-size:cover;background-attachment:fixed;}
-.panel,.box{background:#fff;border-radius:16px;padding:16px;margin-bottom:16px;box-shadow:0 4px 12px rgba(0,0,0,.1)}
-.goals{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.goal{text-align:center;background:#f7f9ff;padding:12px;border-radius:12px}
-.goal img,.next5card img,.slot img{image-rendering:pixelated}
-.goal img{width:96px;height:96px}
-.btn{padding:6px 10px;margin:2px;border-radius:8px;border:1px solid #ccc;cursor:pointer}
-.next5{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;align-items:flex-start}
-.next5card{width:115px;background:#f7f9ff;border-radius:10px;padding:6px;text-align:center}
-.next5card img{width:48px;height:48px}
-.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
-.slot{background:#f8f9ff;border:2px solid #d7def8;border-radius:12px;padding:6px;text-align:center}
-.slot.have{background:#e8fff0}
-.slot.shiny{border-color:gold;box-shadow:0 0 10px rgba(255,215,0,.6)}
-.slot img{width:64px;height:64px}
-.controls{position:fixed;top:15px;right:15px;z-index:1000}
-.settings-content{display:none;position:absolute;right:0;top:40px;background:#fff;padding:10px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.2);min-width:220px}
-.controls.open .settings-content{display:block}
-.settings-btn{font-size:22px;border:none;background:#fff;border-radius:50%;width:42px;height:42px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2)}
-.btn img{width:14px!important;height:14px!important;display:block;margin:auto}
+background-size:cover;
+background-attachment:fixed;
+}
+
+.panel,
+.box{
+background:#fff;
+border-radius:16px;
+padding:16px;
+margin-bottom:16px;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.goals{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+.goal{
+text-align:center;
+background:#f7f9ff;
+padding:12px;
+border-radius:12px;
+}
+
+.goal img,
+.next5card img,
+.slot img{
+image-rendering:pixelated;
+}
+
+.goal img{
+width:96px;
+height:96px;
+}
+
+.btn{
+padding:6px 10px;
+margin:2px;
+border-radius:8px;
+border:1px solid #ccc;
+cursor:pointer;
+}
+
+.next5{
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+justify-content:center;
+align-items:flex-start;
+}
+
+.next5card{
+width:115px;
+background:#f7f9ff;
+border-radius:10px;
+padding:6px;
+text-align:center;
+}
+
+.next5card img{
+width:48px;
+height:48px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(6,1fr);
+gap:8px;
+}
+
+.slot{
+background:#f8f9ff;
+border:2px solid #d7def8;
+border-radius:12px;
+padding:6px;
+text-align:center;
+}
+
+.slot.have{
+background:#e8fff0;
+}
+
+.slot.shiny{
+border-color:gold;
+box-shadow:0 0 10px rgba(255,215,0,.6);
+}
+
+.slot img{
+width:64px;
+height:64px;
+}
+
+.controls{
+position:fixed;
+top:15px;
+right:15px;
+z-index:1000;
+}
+
+.settings-content{
+display:none;
+position:absolute;
+right:0;
+top:40px;
+background:#fff;
+padding:10px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,.2);
+min-width:220px;
+}
+
+.controls.open .settings-content{
+display:block;
+}
+
+.settings-btn{
+font-size:22px;
+border:none;
+background:#fff;
+border-radius:50%;
+width:42px;
+height:42px;
+cursor:pointer;
+box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
+
+.btn img{
+width:14px!important;
+height:14px!important;
+display:block;
+margin:auto;
+}
 
 header.pokedex-header{
 background:linear-gradient(180deg,#ef5350,#c62828);
@@ -34,6 +150,7 @@ overflow:hidden;
 text-align:center;
 color:white;
 }
+
 header.pokedex-header::before{
 content:'◓';
 position:absolute;
@@ -43,6 +160,7 @@ font-size:220px;
 opacity:.08;
 line-height:1;
 }
+
 .pokedex-lights{
 position:absolute;
 left:18px;
@@ -51,11 +169,36 @@ font-size:22px;
 letter-spacing:4px;
 }
 
-.region-row{display:flex;align-items:center;gap:10px;margin:8px 0}
-.region-name{width:70px;font-weight:bold}
-.region-bar{flex:1;height:12px;background:#e5e7eb;border-radius:999px;overflow:hidden}
-.region-fill{height:100%;background:linear-gradient(90deg,#4caf50,#81c784)}
-.region-value{width:80px;text-align:right;font-size:12px}
+.region-row{
+display:flex;
+align-items:center;
+gap:10px;
+margin:8px 0;
+}
+
+.region-name{
+width:70px;
+font-weight:bold;
+}
+
+.region-bar{
+flex:1;
+height:12px;
+background:#e5e7eb;
+border-radius:999px;
+overflow:hidden;
+}
+
+.region-fill{
+height:100%;
+background:linear-gradient(90deg,#4caf50,#81c784);
+}
+
+.region-value{
+width:80px;
+text-align:right;
+font-size:12px;
+}
 
 .back-top-btn{
 position:fixed;
@@ -70,4 +213,152 @@ width:42px;
 height:42px;
 cursor:pointer;
 box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
+
+/* ===================================== */
+/* TABLET */
+/* ===================================== */
+
+@media (max-width:1024px){
+
+.grid{
+grid-template-columns:repeat(4,1fr);
+}
+
+}
+
+/* ===================================== */
+/* MOBILE */
+/* ===================================== */
+
+@media (max-width:768px){
+
+body{
+padding:10px;
+background-attachment:scroll;
+}
+
+.panel,
+.box{
+padding:12px;
+}
+
+.goals{
+grid-template-columns:1fr;
+}
+
+.goal img{
+width:72px;
+height:72px;
+}
+
+.grid{
+grid-template-columns:repeat(3,1fr);
+gap:6px;
+}
+
+.slot{
+padding:4px;
+}
+
+.slot img{
+width:48px;
+height:48px;
+}
+
+.slot div{
+font-size:11px;
+}
+
+.next5{
+justify-content:center;
+}
+
+.next5card{
+width:95px;
+font-size:12px;
+}
+
+.next5card img{
+width:40px;
+height:40px;
+}
+
+.region-name{
+width:55px;
+font-size:12px;
+}
+
+.region-value{
+width:60px;
+font-size:11px;
+}
+
+.settings-content{
+min-width:180px;
+}
+
+header.pokedex-header{
+padding:18px;
+}
+
+header.pokedex-header h1{
+font-size:24px;
+}
+
+.pokedex-lights{
+position:static;
+display:block;
+margin-bottom:8px;
+}
+
+}
+
+/* ===================================== */
+/* SMALL MOBILE */
+/* ===================================== */
+
+@media (max-width:480px){
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.slot img{
+width:56px;
+height:56px;
+}
+
+.slot div{
+font-size:10px;
+}
+
+.next5card{
+width:90px;
+}
+
+.region-row{
+gap:6px;
+}
+
+.region-name{
+width:50px;
+font-size:11px;
+}
+
+.region-value{
+width:50px;
+font-size:10px;
+}
+
+header.pokedex-header h1{
+font-size:20px;
+}
+
+header.pokedex-header::before{
+font-size:120px;
+top:-20px;
+right:10px;
+}
+
 }
