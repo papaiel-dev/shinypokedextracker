@@ -360,3 +360,16 @@ right:10px;
 
 
 }
+
+.slot.highlight{
+border-color:#ff9800 !important;
+box-shadow:0 0 15px rgba(255,152,0,.8);
+}
+
+#jumpSearch{
+padding:8px;
+border-radius:8px;
+border:1px solid #ccc;
+min-width:250px;
+margin-right:8px;
+}
