@@ -31,7 +31,6 @@ border-radius:12px;
 }
 
 .goal img,
-.next5card img,
 .slot img{
 image-rendering:pixelated;
 }
@@ -49,21 +48,9 @@ border:1px solid #ccc;
 cursor:pointer;
 }
 
-.next5{
-display:flex;
-gap:8px;
-flex-wrap:wrap;
-justify-content:center;
-align-items:flex-start;
-}
 
-.next5card{
-width:115px;
-background:#f7f9ff;
-border-radius:10px;
-padding:6px;
-text-align:center;
-}
+
+
 
 .next5card img{
 width:48px;
@@ -270,17 +257,9 @@ height:48px;
 font-size:11px;
 }
 
-.next5{
-display:grid;
-grid-template-columns:repeat(2,minmax(110px,1fr));
-gap:8px;
-justify-items:center;
-}
 
-.next5card{
-width:110px;
-font-size:12px;
-}
+
+
 
 .next5card img{
 width:40px;
@@ -340,13 +319,9 @@ height:56px;
 font-size:10px;
 }
 
-.next5{
-grid-template-columns:repeat(2,1fr);
-}
 
-.next5card{
-width:105px;
-}
+
+
 
 .region-row{
 gap:6px;
@@ -380,12 +355,8 @@ right:10px;
 
 @media (max-width:360px){
 
-.next5{
-grid-template-columns:1fr;
-}
 
-.next5card{
-width:120px;
-}
+
+
 
 }
