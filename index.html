@@ -54,6 +54,12 @@
 </div>
 </div>
 
+<div class="panel">
+<h3>🔍 Localizar Pokémon</h3>
+<input id="jumpSearch" placeholder="Nome ou número da Pokédex" onkeydown="if(event.key==='Enter')goToPokemon()">
+<button class="btn" onclick="goToPokemon()">🔍 Buscar</button>
+</div>
+
 <div id="boxes"></div>
 
 <button id="backToTop" class="back-top-btn" onclick="scrollToTop()">⬆️</button>
