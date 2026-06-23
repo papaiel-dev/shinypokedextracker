@@ -107,21 +107,6 @@ let nc=getNextCollection();
 shinyText.textContent=nc>=0?`#${String(nc+1).padStart(3,'0')} ${pokemon[nc]}`:'Coleção completa';
 shinyImg.src=nc>=0?sprite(nc+1,true):'';
 
-next5.innerHTML='';
-let added=0;
-for(let t of targets){ if(!(start===1&&end===151)) break;
- if(!data[t].shiny && added<5){
-  next5.innerHTML+=`<div class="next5card">
-  <img src="${sprite(t+1,true)}">
-  <div>#${String(t+1).padStart(3,'0')}</div>
-  <div>${pokemon[t]}</div>
-  <button class="btn" onclick="data[${t}].have=true;save()"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" width="16"></button>
-  <button class="btn" onclick="data[${t}].have=true;data[${t}].shiny=true;save()">✨</button><button class="btn" onclick="openSerebii(${t+1})">📍</button>
-  </div>`;
-  added++;
- }
-}
-
 boxes.innerHTML='';
 let s=document.getElementById('search').value.toLowerCase();
 const firstBox=Math.floor((start-1)/30);
